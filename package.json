@@ -1,11 +1,11 @@
 {
   "name": "miniproject",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "server":"nodemon backend/server.js"
+    "server": "nodemon backend/server.js"
   },
-  "type":"module",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PrajanBasnet/miniProject.git"
