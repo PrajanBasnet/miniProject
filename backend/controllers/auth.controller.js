@@ -72,7 +72,7 @@ export const login = async(req,res) =>{
         });
 
     }catch(error){
-         console.log("Error in singup controller " , error.message);
+         console.log("Error in login controller " , error.message);
         res.status(500).json({
             error:"Internal Server Error"
         })
@@ -81,6 +81,18 @@ export const login = async(req,res) =>{
 
 }
 
-export const logout = async(req,res) =>{
-    console.log("Logout User")
+export const logout = (req,res) =>{
+    try{
+        res.cookie("jwt","",{maxAge:0});
+        res.status(200).json({
+            message:"logout successfully"
+        });
+
+    }
+    catch(error){
+          console.log("Error in logout controller " , error.message);
+        res.status(500).json({
+            error:"Internal Server Error"
+        })
+    }
 }
